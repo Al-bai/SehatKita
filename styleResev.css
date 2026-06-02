@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #5472d3,
+    #0d47a1
+  );
+
+  padding: 20px;
+}
+
+
+/* Container */
+
+.reservation-page {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Judul */
+
+.reservation-page h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Card Form */
+
+.reservation-form {
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.reservation-form input {
+  width: 100%;
+  padding: 14px 18px;
+
+  font-size: 15px;
+
+  border: 1.5px solid #d9d9d9;
+  border-radius: 12px;
+
+  background: #fafafa;
+
+  transition: all 0.25s ease;
+}
+
+.reservation-form input::placeholder {
+  color: #999;
+}
+
+.reservation-form input:focus {
+  outline: none;
+
+  background: #fff;
+
+  border-color: #0d47a1;
+
+  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+}
+
+.reservation-form select {
+  width: 100%;
+
+  padding: 14px 18px;
+
+  border: 1.5px solid #d9d9d9;
+
+  border-radius: 12px;
+
+  background: #fafafa;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.reservation-form select:focus {
+  outline: none;
+
+  background: #fff;
+
+  border-color: #0d47a1;
+
+  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+}
+
+/* Button */
+
+.cta {
+  margin-top: 10px;
+
+  width: 100%;
+  padding: 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #ff8800;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.cta:hover {
+  background: #e67700;
+  transform: translateY(-2px);
+}
+
+/* Popup */
+
+.popup {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+
+  width: 90%;
+  max-width: 420px;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  animation: popupShow 0.3s ease;
+}
+
+.popup-content h2 {
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+.popup-content p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+@keyframes popupShow {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

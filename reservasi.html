@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleResev.css">
+  <title>Reservasi</title>
+</head>
+<body>
+
+  <section class="reservation-page">
+    <h1>Form Reservasi Pemeriksaan</h1>
+
+    <form class="reservation-form">
+        <input id="nama" type="text" placeholder="Nama Lengkap" required>
+
+        <input id="umur" type="number" placeholder="Umur" required>
+
+        <input id="telepon" type="tel" placeholder="Nomor Telepon" required>
+
+        <select id="layanan" required>
+          <option value="" selected disabled>
+            Pilih Layanan
+          </option>
+
+          <option value="Pemeriksaan Umum">
+            Pemeriksaan Kesehatan Umum
+          </option>
+
+          <option value="Dokter Spesialis">
+            Konsultasi Dokter Spesialis
+          </option>
+
+          <option value="Laboratorium">
+            Pemeriksaan Laboratorium
+          </option>
+
+          <option value="Vaksinasi">
+            Vaksinasi
+          </option>
+
+          <option value="Medical Check Up">
+            Medical Check Up
+          </option>
+        </select>
+
+        <input id="tanggal" type="date" required>
+
+        <button type="submit" class="cta">
+          Konfirmasi Reservasi
+        </button>
+    </form>
+  </section>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>✓ Reservasi Berhasil</h2>
+
+            <p>
+            Data Anda telah kami terima.<br>
+            Silakan menunggu untuk dihubungi oleh pihak SehatKita++.
+            </p>
+
+            <button id="closePopup" class="cta">
+            OK
+            </button>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
